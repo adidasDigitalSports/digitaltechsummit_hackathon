@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/material_margin_small"
+    android:layout_marginEnd="@dimen/material_margin_small"
+    android:layout_marginStart="@dimen/material_margin_small"
+    android:background="@drawable/contact_selector"
+    tools:showIn="@layout/fragment_contacts">
+
+    <ImageView
+        android:id="@+id/contact_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/material_margin_medium"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_profile" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/material_margin_medium"
+        android:orientation="vertical">
+
+        <com.adidas.hackathon.smartjacket.ui.controls.AdidasTextView
+            android:id="@android:id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textAllCaps="true"
+            android:textColor="@color/secondary"
+            android:textSize="22sp"
+            app:tcTypeface="adineuePROTTBlack" />
+
+        <com.adidas.hackathon.smartjacket.ui.controls.AdidasTextView
+            android:id="@android:id/text2"
+            style="@style/NormalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/number" />
+    </LinearLayout>
+</LinearLayout>

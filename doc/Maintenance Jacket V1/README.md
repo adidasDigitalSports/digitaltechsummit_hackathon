@@ -1,0 +1,1 @@
+This directory contains the code files for the Maintenance Jacket (V1), and an analysis of the code functionalities / structure.

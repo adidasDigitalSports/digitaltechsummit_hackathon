@@ -1,0 +1,26 @@
+{
+  "co" : "npl", "pl" : {
+    "na" : "Plan One",
+           "ph" :
+        [
+          {"du" : 10000, "na" : "Phase One", "co" : "r"},
+          {"du" : 15000, "na" : "Phase Two", "co" : "g"},
+          {"du" : 12000, "na" : "Phase Three", "co" : "b"}
+        ],
+        "it" : 1
+  }
+}
+
+Received from client : {
+  "co" : "npl", "pl" : {
+    "na" : "Plan One",
+           "ph" :
+        [
+          {"na" : "Phase One", "co" : "r", "in" : 30, "du" : 5000},
+          {"na" : "Phase Two", "co" : "g", "in" : 50, "du" : 10000},
+          {"na" : "Phase Three", "co" : "b", "in" : 40, "du" : 12000},
+          {"na" : "Phase Four", "co" : "g", "in" : 20, "du" : 8000}
+        ],
+        "it" : 1
+  }
+}

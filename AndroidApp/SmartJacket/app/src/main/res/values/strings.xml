@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">SmartJacket</string>
+
+    <!-- Home fragment -->
+    <string name="home_instruction_one">Click on the jacket icon to find your smart jacket.</string>
+    <string name="home_instruction_two">Click on the jacket icon to find your smart jacket.</string>
+    <string name="home_instruction_three">Connect to your smart jacket by pressing the bluetooth button.</string>
+    <string name="home_not_connected">NOT CONNECTED</string>
+    <string name="home_connecting">CONNECTING</string>
+    <string name="home_connected">CONNECTED</string>
+    <string name="mac">MAC</string>
+    <string name="start_workout">START WORKOUT</string>
+    <string name="quick_dial">QUICK DIAL</string>
+
+    <!-- Plan fragment -->
+    <string name="plan">PLAN</string>
+    <string name="plan_one">PLAN 1</string>
+    <string name="plan_two">PLAN 2</string>
+    <string name="pick_training_plan">PICK YOUR TRAINING PLAN</string>
+    <string name="choose_selected_plan">CHOOSE SELECTED PLAN</string>
+
+    <!-- Workout fragment -->
+    <string name="workout_press_jacket_label">PRESS THE JACKET LABEL TO START WORKOUT.</string>
+    <string name="workout_ongoing">WORKOUT ONGOING.</string>
+    <string name="workout_paused">WORKOUT PAUSED.</string>
+    <string name="workout_finished">WORKOUT FINISHED.</string>
+    <string name="current_phase">Current phase: </string>
+    <string name="progress">Progress: </string>
+    <string name="workout_example_value">0</string>
+
+    <!-- Device scan fragment -->
+    <string name="bluetooth_device">Bluetooth device</string>
+    <string name="example_mac_address">11:22:33:44:55:66</string>
+    <string name="select">Select</string>
+    <string name="find_and_select">FIND AND SELECT YOUR \nSMART JACKET</string>
+    <string name="scan_for_devices">SCAN FOR DEVICES</string>
+    <string name="scan">SCAN</string>
+    <string name="stop_scanning">STOP SCANNING</string>
+
+    <!-- Contacts fragment -->
+    <string name="name">NAME</string>
+    <string name="number">NUMBER</string>
+
+    <!-- Favorite contact fragment -->
+    <string name="example_name">ADI</string>
+    <string name="quick_dial_contact">QUICK DIAL CONTACT</string>
+    <string name="change_quick_dial">CHANGE QUICK DIAL CONTACT</string>
+</resources>

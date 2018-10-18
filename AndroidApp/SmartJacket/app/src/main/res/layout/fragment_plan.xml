@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/plan_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/workout_header"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/material_margin_large"
+        android:paddingEnd="@dimen/material_margin_medium"
+        android:paddingStart="@dimen/material_margin_medium"
+        android:paddingTop="@dimen/material_margin_large">
+
+        <ImageView
+            android:id="@+id/plan"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/material_margin_small"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_plans_training"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.adidas.hackathon.smartjacket.ui.controls.AdidasHtmlTextView
+            android:id="@+id/home_workout_summary_headline"
+            style="@style/HeadlineTextView.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/material_margin_medium"
+            android:text="@string/pick_training_plan" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/plan_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/material_margin_medium"
+        app:layout_constraintTop_toBottomOf="@id/plan_header">
+
+        <com.adidas.hackathon.smartjacket.ui.controls.AdidasTextView
+            style="@style/NormalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/material_margin_half"
+            android:layout_weight="5"
+            android:text="@string/plan_one" />
+
+        <ImageView
+            android:id="@+id/checkbox_plan_one"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/material_margin_large"
+            android:layout_weight="1"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/checkbox_unchecked" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/plan_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/material_margin_medium"
+        app:layout_constraintTop_toBottomOf="@id/plan_one">
+
+        <com.adidas.hackathon.smartjacket.ui.controls.AdidasTextView
+            style="@style/NormalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/material_margin_half"
+            android:layout_weight="5"
+            android:text="@string/plan_two" />
+
+        <ImageView
+            android:id="@+id/checkbox_plan_two"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/material_margin_large"
+            android:layout_weight="1"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/checkbox_unchecked" />
+    </LinearLayout>
+
+
+    <com.adidas.hackathon.smartjacket.ui.controls.AdidasTextView
+        android:id="@+id/chart_headline"
+        style="@style/SectionTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/material_margin_medium"
+        android:text="@string/plan_one"
+        app:layout_constraintStart_toStartOf="@id/choose_selected_plan_button"
+        app:layout_constraintTop_toBottomOf="@id/plan_two" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/training_plan_chart"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="@dimen/material_margin_medium"
+        app:layout_constraintTop_toBottomOf="@id/chart_headline" />
+
+    <com.adidas.hackathon.smartjacket.ui.controls.AdidasButton
+        android:id="@+id/choose_selected_plan_button"
+        style="@style/SquareButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/material_margin_medium"
+        android:text="@string/choose_selected_plan"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</android.support.constraint.ConstraintLayout>
+
+

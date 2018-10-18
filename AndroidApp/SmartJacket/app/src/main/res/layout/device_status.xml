@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    tools:context=".HomeActivity"
+    android:gravity="center|end">
+
+    <ProgressBar
+        android:id="@+id/progress_spinner"
+        android:layout_width="18dp"
+        android:layout_height="18dp" />
+
+    <com.adidas.hackathon.smartjacket.ui.controls.AdidasTextView
+        android:id="@+id/ble_connection_status"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="@dimen/material_margin_medium"
+        android:layout_height="wrap_content"
+        android:text="@string/home_not_connected"/>
+
+    <ImageView
+        android:id="@+id/bluetooth_status_icon"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        app:srcCompat="@drawable/ic_bluetooth_not_connected" />
+</LinearLayout>

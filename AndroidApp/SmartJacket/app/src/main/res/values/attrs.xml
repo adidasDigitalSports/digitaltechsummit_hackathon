@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TypefaceComponent">
+        <attr name="tcTypeface" format="enum">
+            <!-- Values must match the ones in TypefaceValues.java, any change you make here, do it there as well -->
+            <enum name="robotoRegular" value="0" />
+            <enum name="robotoBold" value="1" />
+            <enum name="robotoMedium" value="2" />
+            <enum name="adineuePROTTRegular" value="3" />
+            <enum name="adineuePROTTBold" value="4" />
+            <enum name="adineuePROTTLight" value="5" />
+            <enum name="adineuePROTTBlack" value="6" />
+            <enum name="adihausDINBold" value="7" />
+            <enum name="adihausDINRegular" value="8" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="AdidasTextView">
+        <attr name="tcTypeface" /> <!-- Make a reference so it shows up as option in auto complete -->
+        <attr name="drawableLeftCompat" format="reference" />
+        <attr name="drawableRightCompat" format="reference" />
+        <attr name="drawableTopCompat" format="reference" />
+        <attr name="drawableBottomCompat" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="AdidasButton">
+        <attr name="abCornerRadius" format="dimension" />
+        <attr name="abPressEffectColor" format="color" />
+        <attr name="abFillColor" format="color" />
+        <attr name="abMaskColor" format="color" />
+        <attr name="abStrokeColor" format="color" />
+        <attr name="abStrokeWidth" format="dimension" />
+        <attr name="abShadowEnabled" format="boolean" />
+    </declare-styleable>
+
+</resources>

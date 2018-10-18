@@ -1,0 +1,30 @@
+Partlist
+
+Exported from 180221_touchcircuit-2x1011.brd at 09/03/2018 11:39
+
+EAGLE Version 8.5.1 Copyright (c) 1988-2017 Autodesk, Inc.
+
+Assembly variant: 
+
+Part     Value          Package    Library             Position (mil)        Orientation
+
+CF1      100nF          C1206      eagle-ltspice       (1695 2105)           R180
+CF2      100nF          C1206      eagle-ltspice       (2200 2105)           R180
+CS1      68nF           C1206      eagle-ltspice       (1700 1895)           R180
+CS2      68nF           C1206      eagle-ltspice       (2200 1895)           R180
+CX1      5.6pF          C1206      eagle-ltspice       (1850 1700)           R0
+CX2      5.6pF          C1206      eagle-ltspice       (2050 1700)           R180
+DATA     IO             1X01       SparkFun-Connectors (2250 2200)           R0
+DS2413                  TSOC6      Christians_Library  (1970 1895)           R0
+E1       E1             1X01       SparkFun-Connectors (1650 1600)           R0
+E2       E2             1X01       SparkFun-Connectors (2250 1600)           R0
+GND      GND            1X01       SparkFun-Connectors (1950 2275)           R0
+GNDPLN   GNDplane       1X01       SparkFun-Connectors (1950 1550)           R0
+QT1011_1 AT42QT1011     AT42QT1011 Christians_Library  (1700 2000)           R270
+QT1011_2 AT42QT1011     AT42QT1011 Christians_Library  (2200 2000)           R270
+R01      0?             R1206      eagle-ltspice       (1974 2073)           R180
+R02      0?             R1206      eagle-ltspice       (1835 2105)           R90
+RPUP     4,7k?          R1206      eagle-ltspice       (1974 2158)           R0
+RS1      220?           R1206      eagle-ltspice       (1640 1755)           R270
+RS2      220?           R1206      eagle-ltspice       (2260 1755)           R270
+VDD      VDD            1X01       SparkFun-Connectors (1650 2200)           R0

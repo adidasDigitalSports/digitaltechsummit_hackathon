@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ble_devices_scan_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/workout_header"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/material_margin_large"
+        android:paddingEnd="@dimen/material_margin_medium"
+        android:paddingStart="@dimen/material_margin_medium"
+        android:paddingTop="@dimen/material_margin_large">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/material_margin_small"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_bluetooth_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.adidas.hackathon.smartjacket.ui.controls.AdidasHtmlTextView
+            android:id="@+id/home_workout_summary_headline"
+            style="@style/HeadlineTextView.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/material_margin_medium"
+            android:text="@string/find_and_select" />
+    </LinearLayout>
+
+
+    <com.adidas.hackathon.smartjacket.ui.controls.AdidasButton
+        android:id="@+id/ble_devices_scan_button"
+        style="@style/SquareButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/material_margin_medium"
+        android:layout_marginStart="@dimen/material_margin_medium"
+        android:layout_marginTop="@dimen/material_margin_medium"
+        android:text="@string/scan_for_devices"
+        app:layout_constraintTop_toBottomOf="@id/ble_devices_scan_header_layout" />
+
+    <View
+        android:id="@+id/ble_devices_recycler_top"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/material_margin_medium"
+        app:layout_constraintTop_toBottomOf="@id/ble_devices_scan_button" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ble_devices_recycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fadeScrollbars="false"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ble_devices_recycler_top"
+        tools:listitem="@layout/ble_devices_item" />
+</android.support.constraint.ConstraintLayout>

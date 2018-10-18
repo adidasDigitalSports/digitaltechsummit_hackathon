@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme colors -->
+    <color name="colorPrimary">#145b7f</color>
+    <color name="colorPrimaryDark">@color/colorPrimary</color>
+    <color name="colorAccent">@color/secondary</color>
+
+    <color name="secondary">#00aebf</color>
+    <color name="secondary_70_transparent">#b300aebf</color>
+    <color name="secondary_60_transparent">#9900aebf</color>
+    <color name="secondary_40_transparent">#6600aebf</color>
+    <color name="secondary_30_transparent">#4d00aebf</color>
+
+    <!-- Whites -->
+    <color name="white">#ffffff</color>
+    <color name="white_30_transparent">#4dffffff</color>
+    <color name="white_40_transparent">#66ffffff</color>
+    <color name="white_60_transparent">#99ffffff</color>
+    <color name="white_80_transparent">#CCffffff</color>
+    <color name="white_86_transparent">#ddffffff</color>
+
+    <!-- Blacks -->
+    <color name="black">#000000</color>
+    <color name="black_10_transparent">#19000000</color>
+    <color name="black_20_transparent">#33000000</color>
+    <color name="black_40_transparent">#66000000</color>
+    <color name="black_50_transparent">#7f000000</color>
+    <color name="black_60_transparent">#99000000</color>
+    <color name="black_80_transparent">#CC000000</color>
+
+    <!-- Greys -->
+    <color name="medium_grey">#ff9fa1a2</color>
+    <color name="medium_grey_10_transparent">#199fa1a2</color>
+    <color name="medium_grey_20_transparent">#339fa1a2</color>
+    <color name="medium_grey_30_transparent">#4d9fa1a2</color>
+    <color name="medium_grey_40_transparent">#669fa1a2</color>
+    <color name="medium_grey_60_transparent">#999fa1a2</color>
+    <color name="background_grey">#e8e8e8</color>
+</resources>

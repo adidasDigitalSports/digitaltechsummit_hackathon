@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>1100</x>
+      <y>264</y>
+      <w>22</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>type=initial
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>825</x>
+      <y>473</y>
+      <w>121</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>select next
+phase</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>1089</x>
+      <y>715</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>type=decision
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>506</y>
+      <w>231</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=has next phase/tupel
+fontsize=12</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0;190.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1012</x>
+      <y>341</y>
+      <w>209</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>Select first phase</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1100</x>
+      <y>374</y>
+      <w>33</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1188</x>
+      <y>517</y>
+      <w>33</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>429</y>
+      <w>187</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1100</x>
+      <y>748</y>
+      <w>110</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fontsize=12
+no phase left</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1056</x>
+      <y>803</y>
+      <w>110</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>set end signals
+type=sender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>1100</x>
+      <y>891</y>
+      <w>22</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>type=final</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1100</x>
+      <y>836</y>
+      <w>33</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1012</x>
+      <y>220</y>
+      <w>198</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>*Run Plan*
+halign=center
+valign=center
+lw=0
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1100</x>
+      <y>275</y>
+      <w>33</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>1441</x>
+      <y>264</y>
+      <w>22</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>type=initial
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1342</x>
+      <y>220</y>
+      <w>198</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>*Run Phase*
+halign=center
+valign=center
+lw=0
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1386</x>
+      <y>319</y>
+      <w>143</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>start phase</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1441</x>
+      <y>275</y>
+      <w>33</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1353</x>
+      <y>396</y>
+      <w>209</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>Execute signal pattern
+for n seconds</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1441</x>
+      <y>352</y>
+      <w>33</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1441</x>
+      <y>429</y>
+      <w>33</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1254</x>
+      <y>264</y>
+      <w>209</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+fg=green</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1254</x>
+      <y>594</y>
+      <w>209</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+fg=green</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>649</x>
+      <y>264</y>
+      <w>22</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>type=initial
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>484</x>
+      <y>319</y>
+      <w>231</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>Receive button press
+*Start Training*
+type=receiver</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>649</x>
+      <y>275</y>
+      <w>33</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>649</x>
+      <y>352</y>
+      <w>33</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>649</x>
+      <y>528</y>
+      <w>33</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>649</x>
+      <y>572</y>
+      <w>22</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>type=final</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>704</x>
+      <y>264</y>
+      <w>418</w>
+      <h>187</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+fg=green</panel_attributes>
+    <additional_attributes>360.0;10.0;60.0;10.0;60.0;150.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>704</x>
+      <y>517</y>
+      <w>418</w>
+      <h>407</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+fg=green</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0;60.0;350.0;360.0;350.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>1441</x>
+      <y>594</y>
+      <w>22</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>type=final</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>1760</x>
+      <y>264</y>
+      <w>22</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>type=initial
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1661</x>
+      <y>330</y>
+      <w>220</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>receive BT command
+*start phase*
+type=receiver</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1760</x>
+      <y>275</y>
+      <w>33</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1760</x>
+      <y>363</y>
+      <w>33</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1760</x>
+      <y>451</y>
+      <w>33</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>1760</x>
+      <y>594</y>
+      <w>22</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>type=final</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1705</x>
+      <y>418</y>
+      <w>132</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>execute
+*Run Phase*
+type=sender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1452</x>
+      <y>264</y>
+      <w>275</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+fg=green</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0;120.0;160.0;230.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1441</x>
+      <y>517</y>
+      <w>308</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+fg=green</panel_attributes>
+    <additional_attributes>260.0;10.0;200.0;10.0;200.0;120.0;10.0;120.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>550</x>
+      <y>220</y>
+      <w>198</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>*Start Plan via button*
+halign=center
+valign=center
+lw=0
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1672</x>
+      <y>220</y>
+      <w>198</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>*Run Phase via BT*
+halign=center
+valign=center
+lw=0
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>253</x>
+      <y>264</y>
+      <w>22</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>type=initial
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>110</x>
+      <y>330</y>
+      <w>209</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>receive plan via BT
+type=receiver</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>253</x>
+      <y>275</y>
+      <w>33</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>187</x>
+      <y>418</y>
+      <w>143</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>Store plan
+on Arduino</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>253</x>
+      <y>363</y>
+      <w>33</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>253</x>
+      <y>451</y>
+      <w>33</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>253</x>
+      <y>506</y>
+      <w>22</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>type=final</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>165</x>
+      <y>220</y>
+      <w>198</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>*Load Plan via BT*
+halign=center
+valign=center
+lw=0
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>1430</x>
+      <y>473</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>type=decision
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1463</x>
+      <y>484</y>
+      <w>121</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=online
+fontsize=12</panel_attributes>
+    <additional_attributes>90.0;30.0;90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1441</x>
+      <y>506</y>
+      <w>66</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+offline
+fontsize=12</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1507</x>
+      <y>517</y>
+      <w>110</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>send phase
+end via BT
+type=sender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1452</x>
+      <y>550</y>
+      <w>132</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fontsize=12</panel_attributes>
+    <additional_attributes>10.0;50.0;100.0;50.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>605</x>
+      <y>407</y>
+      <w>110</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>execute
+*Run Plan*
+type=sender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>605</x>
+      <y>495</y>
+      <w>110</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>*Run Plan*
+finished
+type=receiver</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>407</x>
+      <y>407</y>
+      <w>165</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>*Precondition*
+There exists 1 Run Plan
+fontsize=10
+halign=left
+bg=yellow
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>561</x>
+      <y>418</y>
+      <w>66</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=()-</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>649</x>
+      <y>440</y>
+      <w>33</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>429</y>
+      <w>165</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>Replace existing Run Plan.
+
+*Postcondition*
+There exsists one Run Plan.
+fontsize=10
+halign=left
+bg=yellow
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>154</x>
+      <y>429</y>
+      <w>55</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=()-</panel_attributes>
+    <additional_attributes>30.0;10.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>968</x>
+      <y>352</y>
+      <w>66</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=()-</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>803</x>
+      <y>352</y>
+      <w>176</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>*Precondition*
+- There exists 1 Run Plan
+- There exists at least 1 Phase
+fontsize=10
+halign=left
+bg=yellow
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1133</x>
+      <y>484</y>
+      <w>132</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>execute
+*Run Phase*
+type=sender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1133</x>
+      <y>583</y>
+      <w>132</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>*Run Phase*
+finished
+type=receiver</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1188</x>
+      <y>616</y>
+      <w>33</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>77</x>
+      <y>583</y>
+      <w>440</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>**What is a Plan?**
+In BNF: 
+
+Plan ::= Phase+ .
+Phase ::= ColorLEDValue  BlinkDirection BlinkSpeedInMS TimeInSeconds .
+ColorLEDValue ::= 'white' | 'red' | 'green' | 'yellow' .
+BlinkDirection ::= 'off' | 'static' | 'blink' | 'alternating' | 'forward' | 'backward' .
+BlinkSpeedInMS ::= &lt;integer&gt; .
+TimeInSeconds ::= &lt;integer&gt; .
+
+**Example**
+
+[ (green forward 1000 120) (red forward 500 30) (white blink 2000 30) ]
+
+fontsize=10
+halign=left
+bg=yellow
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSyncBarHorizontal</id>
+    <coordinates>
+      <x>1045</x>
+      <y>429</y>
+      <w>165</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lw=5
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1188</x>
+      <y>429</y>
+      <w>33</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>968</x>
+      <y>484</y>
+      <w>143</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>Indicate overall
+plan progress</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1045</x>
+      <y>429</y>
+      <w>33</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSyncBarHorizontal</id>
+    <coordinates>
+      <x>1045</x>
+      <y>660</y>
+      <w>165</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lw=5
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1045</x>
+      <y>517</y>
+      <w>33</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1100</x>
+      <y>660</y>
+      <w>33</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1705</x>
+      <y>506</y>
+      <w>132</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>*Run Phase*
+finished
+type=receiver</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1760</x>
+      <y>539</y>
+      <w>33</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>407</x>
+      <y>495</y>
+      <w>165</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>*Postcondition*
+There still exists 1 Run Plan
+fontsize=10
+halign=left
+bg=yellow
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>561</x>
+      <y>506</y>
+      <w>77</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=()-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1364</x>
+      <y>704</y>
+      <w>440</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>**TBD**
+
+- Abort Plan
+- Pause Phase &amp; Indicate Pause
+- Abport Phase
+- BT Notify Phase progress ?
+
+fontsize=10
+halign=left
+bg=red
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1606</x>
+      <y>264</y>
+      <w>132</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>*Precondition*
+Running a plan is fully
+controled by the app.
+fontsize=10
+halign=left
+bg=yellow
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1628</x>
+      <y>308</y>
+      <w>66</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=()-</panel_attributes>
+    <additional_attributes>40.0;20.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

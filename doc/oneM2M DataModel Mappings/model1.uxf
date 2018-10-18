@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>657</x>
+      <y>18</y>
+      <w>198</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>**oneM2M TS-0023 ++**
+valign=center
+halign=center
+fontsize=18
+style=wordwrap
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>306</x>
+      <y>18</y>
+      <w>198</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>**Maintenance Jacket**
+valign=center
+halign=center
+fontsize=18
+style=wordwrap
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>306</x>
+      <y>18</y>
+      <w>549</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lw=0
+bg=#808080
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>306</x>
+      <y>126</y>
+      <w>549</w>
+      <h>243</h>
+    </coordinates>
+    <panel_attributes>bg=#dadada
+lw=0
+layer=0
+group=9</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>324</x>
+      <y>144</y>
+      <w>144</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Button
+--
+*buttonID : integer*
+*click : ButtonEvent*
+--
+
+layer=1
+group=9</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>477</x>
+      <y>144</y>
+      <w>189</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;
+group=9</panel_attributes>
+    <additional_attributes>190.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>675</x>
+      <y>396</y>
+      <w>162</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>colour
+--
+*Red : integer*
+*Green : integer*
+*Blue : integer*
+--
+
+lw=1
+
+group=8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>324</x>
+      <y>396</y>
+      <w>171</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>LED
+--
+*red : integer*
+*green : integer*
+*blue : integer*
+*mountingPosition : string*
+--
+
+layer=1
+group=8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>396</y>
+      <w>171</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;
+group=8</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>306</x>
+      <y>378</y>
+      <w>549</w>
+      <h>324</h>
+    </coordinates>
+    <panel_attributes>bg=#dadada
+lw=0
+layer=0
+group=8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>324</x>
+      <y>504</y>
+      <w>171</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>LEDStrip
+--
+*leds[] : LED*
+--
+*blinkingRedLEDs()*
+*allLEDsGreen()*
+*allLEDsOrange()*
+*allLEDsOff()*
+
+layer=1
+group=8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>324</x>
+      <y>729</y>
+      <w>171</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>Vibrator
+--
+*vibration : bool*
+*mountingPosition : string*
+--
+*shortVibration()*
+layer=1
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>729</y>
+      <w>171</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;
+group=6</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>306</x>
+      <y>711</y>
+      <w>549</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>bg=#dadada
+lw=0
+layer=0
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>324</x>
+      <y>234</y>
+      <w>144</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+ButtonEvent
+--
+click
+longpressstart
+doubleclick
+longpressstop
+longpress
+layer=1
+group=9</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>459</x>
+      <y>180</y>
+      <w>54</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=#a0a0a0
+group=9</panel_attributes>
+    <additional_attributes>10.0;80.0;40.0;80.0;40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>324</x>
+      <y>936</y>
+      <w>171</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>ToneGenerator
+--
+*frequency : integer*
+--
+*generateTone(duration)*
+*stop()*
+
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>495</x>
+      <y>936</y>
+      <w>180</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>306</x>
+      <y>918</y>
+      <w>549</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>bg=#dadada
+lw=0
+layer=0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>324</x>
+      <y>1224</y>
+      <w>144</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Navigation
+--
+*direction : Direction*
+--
+
+layer=1
+group=7</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>477</x>
+      <y>1224</y>
+      <w>216</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;
+group=7</panel_attributes>
+    <additional_attributes>220.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>306</x>
+      <y>1206</y>
+      <w>549</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>bg=#dadada
+lw=0
+layer=0
+group=7</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>306</x>
+      <y>81</y>
+      <w>549</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>*Devices*
+lw=0
+valign=center
+halign=center
+fontsize=18
+style=wordwrap
+bg=#b0b0b0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>306</x>
+      <y>1161</y>
+      <w>549</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>*Applications*
+lw=0
+valign=center
+halign=center
+fontsize=18
+style=wordwrap
+bg=#b0b0b0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>324</x>
+      <y>1305</y>
+      <w>144</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Direction
+--
+off
+straightOn
+left
+right
+backUp
+
+layer=1
+group=7</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>459</x>
+      <y>1242</y>
+      <w>63</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=#a0a0a0
+group=7</panel_attributes>
+    <additional_attributes>10.0;90.0;50.0;90.0;50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>864</x>
+      <y>936</y>
+      <w>180</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Do we need a volume data point?
+bg=#f0f080
+style=wordwrap
+fontsize=12
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>324</x>
+      <y>1467</y>
+      <w>144</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Utilities
+--
+
+--
+*powerOnFeedback()*
+*powerOffFeedback()*
+*visualStateFeedback()*
+*audioStateFeedback()*
+*hapticStateFeedback()*
+
+layer=1
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>495</x>
+      <y>1467</y>
+      <w>198</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;
+group=2</panel_attributes>
+    <additional_attributes>200.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>306</x>
+      <y>1449</y>
+      <w>549</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>bg=#dadada
+lw=0
+layer=0
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>864</x>
+      <y>396</y>
+      <w>180</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>mountingPosition → Property
+bg=#f0f080
+style=wordwrap
+fontsize=12
+
+group=8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>693</x>
+      <y>1467</y>
+      <w>144</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>jacketUtilities
+--
+
+--
+*powerOnFeedback()*
+*powerOffFeedback()*
+*visualStateFeedback()*
+*audioStateFeedback()*
+*hapticStateFeedback()*
+
+layer=1
+fg=#2020ff
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>693</x>
+      <y>1224</y>
+      <w>144</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>navigation
+--
+*direction : Direction*
+--
+
+
+layer=1
+fg=#C31923
+group=7</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>459</x>
+      <y>1242</y>
+      <w>252</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=#a0a0a0
+group=7</panel_attributes>
+    <additional_attributes>10.0;90.0;50.0;90.0;50.0;10.0;260.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>666</x>
+      <y>936</y>
+      <w>171</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>alarmSpeaker
+--
+*tone : hd:tone*
+--
+
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>666</x>
+      <y>1008</y>
+      <w>171</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+hd:tone
+--
+fire
+theft
+emergency
+doorbell
+deviceFail
+
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>621</x>
+      <y>954</y>
+      <w>63</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=#a0a0a0</panel_attributes>
+    <additional_attributes>50.0;80.0;10.0;80.0;10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>864</x>
+      <y>1008</y>
+      <w>180</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Predefined tone types, we can add more here.
+bg=#f0f080
+style=wordwrap
+fontsize=12
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>675</x>
+      <y>720</y>
+      <w>162</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>vibration
+--
+*strength : float*
+duration : integer
+pattern : hd:vibration
+--
+
+layer=1
+lw=1
+fg=#C31923
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>864</x>
+      <y>711</y>
+      <w>180</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>mountingPosition → Property
+bg=#f0f080
+style=wordwrap
+fontsize=12
+
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>675</x>
+      <y>819</y>
+      <w>162</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+hd:vibration
+--
+...
+
+layer=1
+lw=1
+fg=#C31923
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>774</y>
+      <w>63</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=#a0a0a0
+group=6</panel_attributes>
+    <additional_attributes>50.0;70.0;10.0;70.0;10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>864</x>
+      <y>819</y>
+      <w>180</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>TODO: Define vibration types
+bg=#f0f080
+style=wordwrap
+fontsize=12
+
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>675</x>
+      <y>612</y>
+      <w>162</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Device&gt;&gt;
+LEDStrip
+--
+*leds : list of colour*
+--
+
+lw=1
+layer=1
+fg=#2020ff
+group=8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>675</x>
+      <y>495</y>
+      <w>162</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>LEDFunctions
+--
+
+--
+*blinkingRedLEDs()*
+*allLEDsGreen()*
+*allLEDsOrange()*
+*allLEDsOff()*
+
+
+lw=1
+layer=1
+fg=#2020ff
+group=8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>621</x>
+      <y>513</y>
+      <w>72</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+fg=#a0a0a0
+group=8</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0;10.0;130.0;60.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>666</x>
+      <y>144</y>
+      <w>171</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>pushButton
+--
+*pushed : boolean*
+pushType: hd:buttonEvent
+--
+
+layer=1
+lw=1
+fg=#C31923
+group=9</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>459</x>
+      <y>180</y>
+      <w>225</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=#a0a0a0
+group=9</panel_attributes>
+    <additional_attributes>10.0;80.0;40.0;80.0;40.0;10.0;230.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>864</x>
+      <y>612</y>
+      <w>180</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>LEDStrip is a Device
+bg=#f0f080
+style=wordwrap
+fontsize=12
+
+group=8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>864</x>
+      <y>144</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>Enhance existing pushButton ModuleClass, or create a new sub-class.
+bg=#f0f080
+style=wordwrap
+fontsize=12
+
+group=9</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

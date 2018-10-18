@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>schema_0.4</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="/Users/akr/Applications/Pandoc/tufte.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="structure-protocol-element-definitions-for-jacket-json">Structure &amp; Protocol Element Definitions for Jacket JSON</h1>
+<p><strong>Version 0.4</strong></p>
+<p>The first part of this document describes the JSON structures for the jacket&#8217;s plans and phases. The second part describes the protocol elements that are exchanged between an app and the jacket (and vice versa).</p>
+<p>The following general rules and restrictions apply:</p>
+<ul>
+<li>All field names and values are case significant.</li>
+<li>The available size for a single plan is currently 512 bytes.</li>
+<li>All JSON data shall be compressed when sent via BLE, ie. without any formatting.</li>
+<li>Every plan and phase start with all LED switched off.</li>
+</ul>
+<hr />
+<h2 id="plan-phases-json-structures">Plan &amp; Phases JSON Structures</h2>
+<h3 id="plan">Plan</h3>
+<p>The schema of a training plan:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">    <span class="dt">&quot;na&quot;</span><span class="fu">:</span> <span class="er">&lt;string&gt;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">    <span class="dt">&quot;ph&quot;</span><span class="fu">:</span> <span class="ot">[</span> <span class="er">&lt;list</span> <span class="er">of</span> <span class="er">Phase&gt;</span> <span class="ot">]</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">    <span class="dt">&quot;it&quot;</span><span class="fu">:</span> <span class="er">&lt;integer&gt;</span></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="fu">}</span></a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Type</th>
+<th>Optional</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>na</td>
+<td>String</td>
+<td>Yes</td>
+<td>empty string</td>
+<td>The name of the plan.</td>
+</tr>
+<tr class="even">
+<td>ph</td>
+<td>List of Phase descriptions</td>
+<td>No</td>
+<td>-</td>
+<td>Ordered list of phases (sb).</td>
+</tr>
+<tr class="odd">
+<td>it</td>
+<td>Integer</td>
+<td>Yes</td>
+<td>1</td>
+<td>Number of repetitions of a plan. 0 = forever</td>
+</tr>
+</tbody>
+</table>
+<h3 id="phase">Phase</h3>
+<p>The schema of a single phase definition:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">    <span class="dt">&quot;na&quot;</span><span class="fu">:</span><span class="er">&lt;string&gt;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">    <span class="dt">&quot;co&quot;</span><span class="fu">:</span><span class="er">&lt;color&gt;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">    <span class="dt">&quot;bd&quot;</span><span class="fu">:</span><span class="er">&lt;blink</span> <span class="er">direction&gt;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">    <span class="dt">&quot;du&quot;</span><span class="fu">:</span><span class="er">&lt;long&gt;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6">    <span class="dt">&quot;bi&quot;</span><span class="fu">:</span><span class="er">&lt;long&gt;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7">    <span class="dt">&quot;in&quot;</span><span class="fu">:</span><span class="er">&lt;long&gt;</span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="fu">}</span></a></code></pre></div>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 22%" />
+<col style="width: 7%" />
+<col style="width: 11%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Type</th>
+<th>Optional</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>na</td>
+<td>String</td>
+<td>Yes</td>
+<td>empty string</td>
+<td>The name of the phase.</td>
+</tr>
+<tr class="even">
+<td>co</td>
+<td>String, color definition</td>
+<td>Yes</td>
+<td>&#8220;n&#8221;</td>
+<td>The name of a color (sb).</td>
+</tr>
+<tr class="odd">
+<td>bd</td>
+<td>String, blink direction</td>
+<td>Yes</td>
+<td>&#8220;f&#8221;</td>
+<td>The name of a blink direction (sb).</td>
+</tr>
+<tr class="even">
+<td>du</td>
+<td>Long integer</td>
+<td>No</td>
+<td>-</td>
+<td>Duration of the phase in ms.</td>
+</tr>
+<tr class="odd">
+<td>bi</td>
+<td>Long integer</td>
+<td>Yes</td>
+<td>value of <em>du</em></td>
+<td>Blink interval in ms.</td>
+</tr>
+<tr class="even">
+<td>in</td>
+<td>Long integer</td>
+<td>Yes</td>
+<td>-</td>
+<td>Intensity, e.g.&#160;for Trainings. The jacket will ignore this field.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="color-definition">Color Definition</h3>
+<p>The following abbreviated values define color values:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Value</th>
+<th>Color</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>r</td>
+<td>Red</td>
+</tr>
+<tr class="even">
+<td>y</td>
+<td>Yellow</td>
+</tr>
+<tr class="odd">
+<td>g</td>
+<td>Green</td>
+</tr>
+<tr class="even">
+<td>b</td>
+<td>Blue</td>
+</tr>
+<tr class="odd">
+<td>n</td>
+<td>No color, off</td>
+</tr>
+</tbody>
+</table>
+<h3 id="blink-definition">Blink Definition</h3>
+<p>The following abbreviated values define blink behaviours:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Value</th>
+<th>Blink Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>f</td>
+<td>Forward</td>
+</tr>
+<tr class="even">
+<td>r</td>
+<td>Reverse, backward</td>
+</tr>
+<tr class="odd">
+<td>s</td>
+<td>Static</td>
+</tr>
+<tr class="even">
+<td>b</td>
+<td>Blink</td>
+</tr>
+</tbody>
+</table>
+<p><strong>TODO</strong> The options of this table need to be aligned with the use cases.</p>
+<h3 id="example">Example</h3>
+<p>The following example shows a plan and its phases.</p>
+<ul>
+<li>Some of the optional attributes, such as <em>plan.na</em>, <em>phase[0].na</em>, <em>plan.it</em> etc are provided to show their use.</li>
+<li>The last phase expands to &#8220;color: none, bs: 5000, bd:f&#8221;.</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">    <span class="dt">&quot;na&quot;</span><span class="fu">:</span><span class="st">&quot;Testplan&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">    <span class="dt">&quot;ph&quot;</span><span class="fu">:</span><span class="ot">[</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4">        <span class="fu">{</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5">            <span class="dt">&quot;na&quot;</span><span class="fu">:</span><span class="st">&quot;red&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-6" data-line-number="6">            <span class="dt">&quot;co&quot;</span><span class="fu">:</span><span class="st">&quot;r&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-7" data-line-number="7">            <span class="dt">&quot;bd&quot;</span><span class="fu">:</span><span class="st">&quot;f&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-8" data-line-number="8">            <span class="dt">&quot;bi&quot;</span><span class="fu">:</span><span class="dv">500</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-9" data-line-number="9">            <span class="dt">&quot;du&quot;</span><span class="fu">:</span><span class="dv">5000</span></a>
+<a class="sourceLine" id="cb3-10" data-line-number="10">        <span class="fu">}</span><span class="ot">,</span></a>
+<a class="sourceLine" id="cb3-11" data-line-number="11">        <span class="fu">{</span></a>
+<a class="sourceLine" id="cb3-12" data-line-number="12">            <span class="dt">&quot;co&quot;</span><span class="fu">:</span><span class="st">&quot;y&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-13" data-line-number="13">            <span class="dt">&quot;bi&quot;</span><span class="fu">:</span><span class="dv">200</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-14" data-line-number="14">            <span class="dt">&quot;du&quot;</span><span class="fu">:</span><span class="dv">5000</span></a>
+<a class="sourceLine" id="cb3-15" data-line-number="15">        <span class="fu">}</span><span class="ot">,</span></a>
+<a class="sourceLine" id="cb3-16" data-line-number="16">        <span class="fu">{</span></a>
+<a class="sourceLine" id="cb3-17" data-line-number="17">            <span class="dt">&quot;co&quot;</span><span class="fu">:</span><span class="st">&quot;g&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-18" data-line-number="18">            <span class="dt">&quot;bi&quot;</span><span class="fu">:</span><span class="dv">100</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-19" data-line-number="19">            <span class="dt">&quot;du&quot;</span><span class="fu">:</span><span class="dv">5000</span></a>
+<a class="sourceLine" id="cb3-20" data-line-number="20">        <span class="fu">}</span><span class="ot">,</span></a>
+<a class="sourceLine" id="cb3-21" data-line-number="21">        <span class="fu">{</span></a>
+<a class="sourceLine" id="cb3-22" data-line-number="22">            <span class="dt">&quot;co&quot;</span><span class="fu">:</span><span class="st">&quot;b&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-23" data-line-number="23">            <span class="dt">&quot;bi&quot;</span><span class="fu">:</span><span class="dv">50</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-24" data-line-number="24">            <span class="dt">&quot;du&quot;</span><span class="fu">:</span><span class="dv">5000</span></a>
+<a class="sourceLine" id="cb3-25" data-line-number="25">        <span class="fu">}</span><span class="ot">,</span></a>
+<a class="sourceLine" id="cb3-26" data-line-number="26">        <span class="fu">{</span></a>
+<a class="sourceLine" id="cb3-27" data-line-number="27">            <span class="dt">&quot;du&quot;</span><span class="fu">:</span><span class="dv">5000</span></a>
+<a class="sourceLine" id="cb3-28" data-line-number="28">        <span class="fu">}</span></a>
+<a class="sourceLine" id="cb3-29" data-line-number="29">    <span class="ot">]</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-30" data-line-number="30">    <span class="dt">&quot;it&quot;</span><span class="fu">:</span><span class="dv">0</span></a>
+<a class="sourceLine" id="cb3-31" data-line-number="31"><span class="fu">}</span></a></code></pre></div>
+<hr />
+<h2 id="protocol-element-definitions">Protocol Element Definitions</h2>
+<p>The definitions in this section specify the protocol elements for the BLE communication between an app and a jacket. Every command and answer is sent in a single BLE datagram.</p>
+<p><strong>Commands Overview</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>npl</td>
+<td><a href="#load-plan-into-jacket-app-jacket">Load Plan into Jacket</a></td>
+</tr>
+<tr class="even">
+<td>spl</td>
+<td><a href="#start-plan-in-jacket-app-jacket">Start Plan in Jacket</a></td>
+</tr>
+<tr class="odd">
+<td>sph</td>
+<td><a href="#load-and-start-a-phase-app-jacket">Load and Start a Phase</a></td>
+</tr>
+<tr class="even">
+<td>stp</td>
+<td><a href="#stop-a-plan-app-jacket">Stop a Plan</a></td>
+</tr>
+<tr class="odd">
+<td>pse</td>
+<td><a href="#pause-a-plan-app-jacket">Pause a Plan</a></td>
+</tr>
+<tr class="even">
+<td>prv</td>
+<td><a href="#start-previous-phase-app-jacket">Start Previous Phase</a></td>
+</tr>
+<tr class="odd">
+<td>nxt</td>
+<td><a href="#start-next-phase-app-jacket">Start Next Phase</a></td>
+</tr>
+<tr class="even">
+<td>rst</td>
+<td><a href="#reset-the-jacket-app-jacket">Reset the Jacket</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Signals Overview</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Signal</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>eopl</td>
+<td><a href="#signal-end-of-plan-jacket-app">Signal End of Plan</a></td>
+</tr>
+<tr class="even">
+<td>eoph</td>
+<td><a href="#signal-end-of-phase-jacket-app">Signal End of Phase</a></td>
+</tr>
+<tr class="odd">
+<td>btn</td>
+<td><a href="#signal-button-press-jacket-app">Signal Button Press</a></td>
+</tr>
+<tr class="even">
+<td>bat</td>
+<td><a href="#signal-battery-level-jacket-app">Signal Battery Level</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="load-plan-into-jacket-app-jacket">Load Plan into Jacket (App &#8594; Jacket)</h3>
+<p>This JSON structure defines the protocol element to load a plan into a jacket. The plan is not started. It is send from an application to the jacket.</p>
+<p>If successfully transmitted and processed by the jacket, the plan replaces an exsisting plan in the jacket.</p>
+<p>If the jacket is currently executing a plan, that plan is stopped.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2">    <span class="dt">&quot;co&quot;</span><span class="fu">:</span> <span class="st">&quot;npl&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3">    <span class="dt">&quot;pl&quot;</span><span class="fu">:</span> <span class="er">&lt;plan&gt;</span></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="fu">}</span></a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Type</th>
+<th>Optional</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>co</td>
+<td>String</td>
+<td>No</td>
+<td>-</td>
+<td>The command. Must be &#8220;npl&#8221;.</td>
+</tr>
+<tr class="even">
+<td>pl</td>
+<td>JSON Structure</td>
+<td>No</td>
+<td>-</td>
+<td>A plan as defined above.</td>
+</tr>
+</tbody>
+</table>
+<p>If successful the jacket MUST answer with a positive acknowledge, otherwise with a negative response (s.b.).</p>
+<h3 id="start-plan-in-jacket-app-jacket">Start Plan in Jacket (App &#8594; Jacket)</h3>
+<p>This JSON structure defines the protocol element to start a previously loaded plan into a jacket. This command, when given without a plan description, also unpauses a previously paused (not stopped!) plan (<a href="#pause-a-plan-app-jacket">Pause a Plan</a>).</p>
+<p>Optionally, a plan can be transmitted together with this command. See the description above (<a href="#load-plan-into-jacket">Load Plan into Jacket</a>).</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb5-2" data-line-number="2">    <span class="dt">&quot;co&quot;</span><span class="fu">:</span> <span class="st">&quot;spl&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-3" data-line-number="3">    <span class="dt">&quot;pl&quot;</span><span class="fu">:</span> <span class="er">&lt;plan&gt;</span></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="fu">}</span></a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Type</th>
+<th>Optional</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>co</td>
+<td>String</td>
+<td>No</td>
+<td>-</td>
+<td>The command. Must be &#8220;spl&#8221;.</td>
+</tr>
+<tr class="even">
+<td>pl</td>
+<td>JSON Structure</td>
+<td>Yes</td>
+<td>-</td>
+<td>A plan as defined above.</td>
+</tr>
+</tbody>
+</table>
+<p>If successful the jacket MUST answer with a positive acknowledge, otherwise with a negative response (s.b.).</p>
+<h3 id="load-and-start-a-phase-app-jacket">Load and Start a Phase (App &#8594; Jacket)</h3>
+<p>This JSON structure defines the protocol element to load into a jacket and start it. The jacket handles the loading of a phase as a plan with a single phase and with no repetition.</p>
+<p>If successfully transmitted and processed by the jacket, the phase replaces an exsisting running phase in the jacket.</p>
+<p>If the jacket is currently executing a phase, that phase is stopped.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">    <span class="dt">&quot;co&quot;</span><span class="fu">:</span> <span class="st">&quot;sph&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb6-3" data-line-number="3">    <span class="dt">&quot;pl&quot;</span><span class="fu">:</span> <span class="er">&lt;phase&gt;</span></a>
+<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="fu">}</span></a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Type</th>
+<th>Optional</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>co</td>
+<td>String</td>
+<td>No</td>
+<td>-</td>
+<td>The command. Must be &#8220;sph&#8221;.</td>
+</tr>
+<tr class="even">
+<td>ph</td>
+<td>JSON Structure</td>
+<td>No</td>
+<td>-</td>
+<td>A single phase as defined above.</td>
+</tr>
+</tbody>
+</table>
+<p>If successful the jacket MUST answer with a positive acknowledge, otherwise with a negative response (s.b.).</p>
+<h3 id="stop-a-plan-app-jacket">Stop a Plan (App &#8594; Jacket)</h3>
+<p>This JSON structure defines the protocol element to stop a running plan. When started again (see <a href="#start-plan-in-jacket-app-jacket">Start Plan in Jacket</a>) the plan starts from the beginning.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb7-2" data-line-number="2">    <span class="dt">&quot;co&quot;</span><span class="fu">:</span> <span class="st">&quot;stp&quot;</span></a>
+<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="fu">}</span></a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Type</th>
+<th>Optional</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>co</td>
+<td>String</td>
+<td>No</td>
+<td>-</td>
+<td>The command. Must be &#8220;stp&#8221;.</td>
+</tr>
+</tbody>
+</table>
+<p>If successful the jacket MUST answer with a positive acknowledge, otherwise with a negative response (s.b.).</p>
+<h3 id="pause-a-plan-app-jacket">Pause a Plan (App &#8594; Jacket)</h3>
+<p>This JSON structure defines the protocol element to pause a running plan. When started again (see <a href="#start-plan-in-jacket-app-jacket">Start Plan in Jacket</a>) the plan starts where it was paused.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb8-2" data-line-number="2">    <span class="dt">&quot;co&quot;</span><span class="fu">:</span> <span class="st">&quot;pse&quot;</span></a>
+<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="fu">}</span></a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Type</th>
+<th>Optional</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>co</td>
+<td>String</td>
+<td>No</td>
+<td>-</td>
+<td>The command. Must be &#8220;pse&#8221;.</td>
+</tr>
+</tbody>
+</table>
+<p>If successful the jacket MUST answer with a positive acknowledge, otherwise with a negative response (s.b.).</p>
+<h3 id="start-previous-phase-app-jacket">Start Previous Phase (App &#8594; Jacket)</h3>
+<p>This JSON structure defines the protocol element to stop the current and activate the previous phase. If there is no previous phase then this command is ignored.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb9-2" data-line-number="2">    <span class="dt">&quot;co&quot;</span><span class="fu">:</span> <span class="st">&quot;prv&quot;</span></a>
+<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="fu">}</span></a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Type</th>
+<th>Optional</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>co</td>
+<td>String</td>
+<td>No</td>
+<td>-</td>
+<td>The command. Must be &#8220;prv&#8221;.</td>
+</tr>
+</tbody>
+</table>
+<p>If successful the jacket MUST answer with a positive acknowledge, otherwise with a negative response (s.b.).</p>
+<h3 id="start-next-phase-app-jacket">Start Next Phase (App &#8594; Jacket)</h3>
+<p>This JSON structure defines the protocol element to stop the current and activate the next phase. If there is no next phase then this command is ignored.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb10-2" data-line-number="2">    <span class="dt">&quot;co&quot;</span><span class="fu">:</span> <span class="st">&quot;nxt&quot;</span></a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="fu">}</span></a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Type</th>
+<th>Optional</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>co</td>
+<td>String</td>
+<td>No</td>
+<td>-</td>
+<td>The command. Must be &#8220;nxt&#8221;.</td>
+</tr>
+</tbody>
+</table>
+<p>If successful the jacket MUST answer with a positive acknowledge, otherwise with a negative response (s.b.).</p>
+<h3 id="reset-the-jacket-app-jacket">Reset the Jacket (App &#8594; Jacket)</h3>
+<p>This JSON structure defines the protocol element to reset a jacket to an initial state. This includes stopping and removing all phases and plans, setting the LEDs to off-state, etc.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb11-2" data-line-number="2">    <span class="dt">&quot;co&quot;</span><span class="fu">:</span> <span class="st">&quot;rst&quot;</span></a>
+<a class="sourceLine" id="cb11-3" data-line-number="3"><span class="fu">}</span></a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Type</th>
+<th>Optional</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>co</td>
+<td>String</td>
+<td>No</td>
+<td>-</td>
+<td>The command. Must be &#8220;rst&#8221;.</td>
+</tr>
+</tbody>
+</table>
+<p>If successful the jacket MUST answer with a positive acknowledge, otherwise with a negative response (s.b.).</p>
+<h3 id="signal-end-of-plan-jacket-app">Signal End of Plan (Jacket &#8594; App)</h3>
+<p>This JSON structure defines the protocol element to signal the end of a plan from the jacket to an app.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb12-2" data-line-number="2">    <span class="dt">&quot;si&quot;</span><span class="fu">:</span> <span class="st">&quot;eopl&quot;</span></a>
+<a class="sourceLine" id="cb12-3" data-line-number="3"><span class="fu">}</span></a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Type</th>
+<th>Optional</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>si</td>
+<td>String</td>
+<td>No</td>
+<td>-</td>
+<td>The signal. Must be &#8220;eopl&#8221;.</td>
+</tr>
+</tbody>
+</table>
+<p>Sending this protocol element DOES NOT require an answer from the receiving app.</p>
+<h3 id="signal-end-of-phase-jacket-app">Signal End of Phase (Jacket &#8594; App)</h3>
+<p>This JSON structure defines the protocol element to signal the end of a phase from the jacket to an app.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb13-2" data-line-number="2">    <span class="dt">&quot;si&quot;</span><span class="fu">:</span> <span class="st">&quot;eoph&quot;</span></a>
+<a class="sourceLine" id="cb13-3" data-line-number="3"><span class="fu">}</span></a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Type</th>
+<th>Optional</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>si</td>
+<td>String</td>
+<td>No</td>
+<td>-</td>
+<td>The signal. Must be &#8220;eoph&#8221;.</td>
+</tr>
+</tbody>
+</table>
+<p>Sending this protocol element DOES NOT require an answer from the receiving app.</p>
+<h3 id="signal-button-press-jacket-app">Signal Button Press (Jacket &#8594; App)</h3>
+<p>This JSON structure defines the protocol element to signal the press of a button / a button event from the jacket to an app.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb14-2" data-line-number="2">    <span class="dt">&quot;si&quot;</span><span class="fu">:</span> <span class="st">&quot;btn&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb14-3" data-line-number="3">    <span class="dt">&quot;bt&quot;</span><span class="fu">:</span> <span class="er">&lt;button</span> <span class="er">type&gt;</span></a>
+<a class="sourceLine" id="cb14-4" data-line-number="4"><span class="fu">}</span></a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Type</th>
+<th>Optional</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>si</td>
+<td>String</td>
+<td>No</td>
+<td>-</td>
+<td>The signal. Must be &#8220;btn&#8221;.</td>
+</tr>
+<tr class="even">
+<td>bt</td>
+<td>String</td>
+<td>No</td>
+<td>-</td>
+<td>The button event type (sb).</td>
+</tr>
+</tbody>
+</table>
+<p>Sending this protocol element DOES NOT require an answer from the receiving app.</p>
+<h4 id="button-types">Button Types</h4>
+<p>The following abbreviated values define button event types:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Value</th>
+<th>Button Event</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>a</td>
+<td>Button A touched only.</td>
+</tr>
+<tr class="even">
+<td>b</td>
+<td>Button B touched only.</td>
+</tr>
+<tr class="odd">
+<td>ab</td>
+<td>Both button A and B touched simultaneously.</td>
+</tr>
+<tr class="even">
+<td>a2b</td>
+<td>Slide-touch from button A to B.</td>
+</tr>
+<tr class="odd">
+<td>b2a</td>
+<td>Slide-touch from button B to A.</td>
+</tr>
+<tr class="even">
+<td>ice</td>
+<td>Emergency touch gesture.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="signal-battery-level-jacket-app">Signal Battery Level (Jacket &#8594; App)</h3>
+<p>This JSON structure defines the protocol element to signal the battery level of the jackets internal battery to an app.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb15-1" data-line-number="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb15-2" data-line-number="2">    <span class="dt">&quot;si&quot;</span><span class="fu">:</span> <span class="st">&quot;bat&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb15-3" data-line-number="3">    <span class="dt">&quot;bl&quot;</span><span class="fu">:</span> <span class="er">&lt;integer&gt;</span></a>
+<a class="sourceLine" id="cb15-4" data-line-number="4"><span class="fu">}</span></a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Type</th>
+<th>Optional</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>si</td>
+<td>String</td>
+<td>No</td>
+<td>-</td>
+<td>The signal. Must be &#8220;bat&#8221;.</td>
+</tr>
+<tr class="even">
+<td>bl</td>
+<td>Integer</td>
+<td>No</td>
+<td>-</td>
+<td>The current battery level of the jacket.</td>
+</tr>
+</tbody>
+</table>
+<p>Sending this protocol element DOES NOT require an answer from the receiving app.</p>
+<p><strong>NOTE</strong>: We need to define what the most meaningful battery level would be. Charge? %? time remaining?</p>
+<h3 id="answers">Answers</h3>
+<p><strong>Positive Acknowledgment</strong></p>
+<p>A positive acknowledge is sent as an answer to a message when the message</p>
+<ul>
+<li>was received, and</li>
+<li>was correctly parsed, and</li>
+<li>was correctly executed.</li>
+</ul>
+<p><strong>Negative Acknowledgment</strong></p>
+<p>A negative acknowledge is sent as an answer when any of above conditions was not met. In this case a reason MUST be given to the sender. See the status codes below.</p>
+<p><strong>Acknowledgment Structure</strong></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb16-2" data-line-number="2">    <span class="dt">&quot;ack&quot;</span><span class="fu">:</span> <span class="er">&lt;bool&gt;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb16-3" data-line-number="3">    <span class="dt">&quot;rs&quot;</span><span class="fu">:</span> <span class="er">&lt;integer&gt;</span></a>
+<a class="sourceLine" id="cb16-4" data-line-number="4"><span class="fu">}</span></a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Type</th>
+<th>Optional</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ack</td>
+<td>Boolean</td>
+<td>No</td>
+<td>-</td>
+<td>True or false, depending on the result.</td>
+</tr>
+<tr class="even">
+<td>rs</td>
+<td>Integer</td>
+<td>Yes</td>
+<td>200</td>
+<td>A status code, similar to http status codes.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="status-codes">Status Codes</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Status Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>200</td>
+<td>OK. Positive acknowledgment.</td>
+</tr>
+<tr class="even">
+<td>204</td>
+<td>No Content. If the message was empty.</td>
+</tr>
+<tr class="odd">
+<td>400</td>
+<td>Bad Request. If the JSON was incorrect.</td>
+</tr>
+<tr class="even">
+<td>405</td>
+<td>Method Not Allowed. Method not allowed at this time.</td>
+</tr>
+<tr class="odd">
+<td>500</td>
+<td>Internal Server Error. Should not happen.</td>
+</tr>
+<tr class="even">
+<td>501</td>
+<td>Not Implemented. Method not implemented yes.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NOTE</strong>: Anything else?</p>
+<hr />
+<h2 id="future-extensions">Future Extensions</h2>
+<ul>
+<li>Feature: Instead of defining a phase that does the same as a previous one, reference that defined phase <code>{&quot;re&quot;:&quot;nameOfPhase&quot;}</code></li>
+</ul>
+<hr />
+<h2 id="changes">Changes</h2>
+<h4 id="version-0.4">Version 0.4</h4>
+<ul>
+<li>Fixed typos.</li>
+<li>Fixed battery level type.</li>
+<li>Added <em>nxt</em> and <em>prv</em> commands.</li>
+</ul>
+<h4 id="version-0.3">Version 0.3</h4>
+<ul>
+<li>Fixed wrong <em>stp</em> command in command overview table.</li>
+<li>Added version history section.</li>
+<li>Added page numbers for the Word doc.</li>
+</ul>
+<h4 id="version-0.2">Version 0.2</h4>
+<ul>
+<li>Specified protocol elements.</li>
+</ul>
+<h4 id="version-0.1">Version 0.1</h4>
+<ul>
+<li>Initial version.</li>
+</ul>
+</body>
+</html>

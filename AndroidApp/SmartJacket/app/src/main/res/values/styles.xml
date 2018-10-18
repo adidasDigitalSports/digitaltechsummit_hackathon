@@ -1,0 +1,71 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorBackground">@color/white</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorForeground">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="buttonStyle">@style/SquareButton</item>
+        <item name="android:statusBarColor">#33000000</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.ColoredStatusBar">
+        <item name="android:statusBarColor">#145b7f</item>
+    </style>
+
+    <style name="SquareButton">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/square_button_text</item>
+        <item name="abCornerRadius">0dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="abFillColor">@color/secondary</item>
+        <item name="abPressEffectColor">@color/white_60_transparent</item>
+        <item name="abMaskColor">@color/white</item>
+        <item name="tcTypeface">adineuePROTTBlack</item>
+    </style>
+
+    <style name="BlueCheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/secondary</item>
+        <item name="colorControlHighlight">@color/medium_grey</item>
+    </style>
+
+    <style name="HeadlineTextView">
+        <item name="android:textSize">32sp</item>
+        <item name="tcTypeface">adineuePROTTBlack</item>
+    </style>
+
+    <style name="HeadlineTextView.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="SectionTitleTextView">
+        <item name="android:textColor">@color/secondary</item>
+        <item name="android:textSize">22sp</item>
+        <item name="tcTypeface">adineuePROTTBlack</item>
+    </style>
+
+    <style name="NormalTextView">
+        <item name="android:textSize">12sp</item>
+        <item name="tcTypeface">adihausDINRegular</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+
+    <style name="SubtitleTextView">
+        <item name="android:textSize">16sp</item>
+        <item name="tcTypeface">adihausDINBold</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+
+    <style name="SubtitleTextView.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+</resources>

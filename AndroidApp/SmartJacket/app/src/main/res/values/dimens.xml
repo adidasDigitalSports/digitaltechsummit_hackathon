@@ -1,0 +1,13 @@
+<resources>
+    <dimen name="material_margin_half">4dp</dimen>
+    <dimen name="material_margin_small">8dp</dimen>
+    <dimen name="material_margin_medium">16dp</dimen>
+    <dimen name="material_margin_normal">24dp</dimen>
+    <dimen name="material_margin_large">32dp</dimen>
+    <dimen name="material_margin_huge">48dp</dimen>
+    <dimen name="material_margin_enormous">64dp</dimen>
+
+    <dimen name="button_elevation_material">2dp</dimen>
+    <dimen name="button_pressed_z_material">2dp</dimen>
+
+</resources>
